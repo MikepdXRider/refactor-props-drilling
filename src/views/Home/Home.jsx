@@ -1,19 +1,22 @@
 import { useEffect, useState } from 'react'
 import Profile from '../../components/Profile/Profile'
+import { useUser } from '../../context/UserContext'
 
-const Home = ({ user }) => {
-  const [loading, setLoading] = useState(true)
+const Home = () => {
+  const [loading, setLoading] = useState(true);
+  const {userObj} = useUser({});
+  const { name } = userObj;
 
   useEffect(() => {
-    if (user.name) {
-      setLoading(false)
+    if (name) {
+      setLoading(false);
     } else {
-      setLoading(true)
+      setLoading(true);
     }
-  }, [user])
+  }, [name])
 
   if (loading) return <h1>Loading...</h1>
-  return <Profile user={user} />
+  return <Profile/>
 }
 
 export default Home
