@@ -25,7 +25,7 @@ export default function Profile() {
           </span>
         </p>
       </div>
-      <LikeList likes={likes} name={name} />
+      <LikeList/>
     </div>
   )
 }

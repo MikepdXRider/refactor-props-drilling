@@ -23,7 +23,7 @@ const UserProvider = ({children}) => {
         // This block of code does a couple of things:
         // 1. We can attach/access/update the Provider property(and values) of the UserContext module/class, which can be accessed later on in the useUser hook.
         // 2. Now any nested children within this component will have access to the values of the provider.
-        <UserContext.Provider value={{setUserObj, userObj}}>
+        <UserContext.Provider value={{userObj, setUserObj}}>
         {children}
         </UserContext.Provider>
     )    
