@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--grey);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+header p {
+  margin-right: 2.5rem;
+}
+
+header p {
+  color: var(--off-white);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.app-logo {
+  height: 15vh;
+  object-fit: contain;
+}
